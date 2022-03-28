@@ -1,8 +1,8 @@
-.Accordion {
-  width: 700px;
+.accordion {
+  width: 800px;
   margin: 100px auto;
 
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 6px;
 }
