@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
-  row-gap: 32px;
+  row-gap: 16px;
   align-items: center;
 }
 /* "When we have the open class, target the hidden box and set display block" */

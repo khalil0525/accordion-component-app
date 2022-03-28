@@ -42,10 +42,10 @@ const AccordionItem = (props) => {
       <div className={styles["hidden-box"]}>
         <p>{props.description}</p>
         <ul>
-          <li>adipisicing elit. Maxime nihil reiciendis officia</li>
-          <li>adipisicing elit. Maxime nihil reiciendis officia</li>
-          <li>adipisicing elit. Maxime nihil reiciendis officia</li>
-          <li>adipisicing elit. Maxime nihil reiciendis officia</li>
+          <li>{props.specifications[0]}</li>
+          <li>{props.specifications[1]}</li>
+          <li>{props.specifications[2]}</li>
+          <li>{props.specifications[3]}</li>
         </ul>
       </div>
     </div>
