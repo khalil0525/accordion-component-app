@@ -42,7 +42,7 @@ const dummyData = [
   },
   {
     number: "4",
-    title: "Wheel Driving Sim, PC Racing Wheel Dual-Motor Vibrate",
+    title: "The sim racing shifter for G29 and G920 Driving Force",
     description:
       "The sim racing shifter for G29 and G920 Driving Force Racing Wheels. Add realistic shifting to your racing wheel setup and to the latest PC and console racing titles.",
     specifications: [
