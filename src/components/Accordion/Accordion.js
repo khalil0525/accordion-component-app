@@ -6,9 +6,21 @@ const Accordion = (props) => {
   const [openItem, setOpenItem] = useState(true);
   return (
     <div className="Accordion">
-      <AccordionItem />
-      <AccordionItem />
-      <AccordionItem />
+      <AccordionItem
+        number="1"
+        title="Something"
+        description="some text here"
+      />
+      <AccordionItem
+        number="2"
+        title="Something"
+        description="some text here"
+      />
+      <AccordionItem
+        number="3"
+        title="Something"
+        description="some text here"
+      />
     </div>
   );
 };

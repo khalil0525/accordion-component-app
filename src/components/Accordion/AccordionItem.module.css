@@ -1,20 +1,42 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 .accordion-item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
   row-gap: 32px;
-  border: 1px solid #000;
-  padding: 22px;
-  width: 50%;
-  height: 50%;
+  align-items: center;
+}
+/* "When we have the open class, target the hidden box and set display block" */
+.open .hidden-box {
+  display: block;
 }
 .open {
+  border-top: 4px solid #087f5b;
 }
-.accordion-item--heading {
+
+.number,
+.text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #087f5b;
+}
+.number {
+  color: #ced4da;
 }
 .btn {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+.hidden-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hidden-box {
+  grid-column: 2;
+  display: none;
 }
