@@ -1,23 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./AccordionItem.module.css";
 
 const AccordionItem = (props) => {
-  // This state controls whether the accordion tab is open or not. It's false/Closed by default
-  // const [isOpen, setIsOpen] = useState(false);
-  //This handler will set the state of isOpen to false or true and call the onClickAccordion fucntion, passed in props from Accordion, to pass up the components number prop.
-  // const isOpen = false;
+  // This handler is executed when the button on an AccordionItem is click and will send the AccordionItem's number value to Accordion.
+  // This is used to set the state in Accordion and that state is passed back down via props, causing the AccordionItems to re-render
   const buttonClickHandler = (event) => {
-    // setIsOpen((prevState) => !prevState);
     // This number prop is used to set the state of the openItem variable in Accordion. That information is then passed down to the AccordionItems
-    // To close the AccordionItem tabs that are not equivalent to the current openItem value.
+    // To close the AccordionItem tabs that are not equivalent to the current open AccordionItem. If the AccordionItem was already opened, it will be closed..
     props.onClickAccordion(props.number);
   };
-  // This if statement checks if the AccordionItem is currently open and if it is the proper AccordionItem tab that's supposed to be open.
-  // if (props.currentOpenItem === props.number) {
-  //   // If an AccordionItem is currently open and isn't the currenOpenItem, we switch it's state to false to close it.
-  //   isOpen = true;
-  // }
+
   //********************JSX*************************
   return (
     <div
