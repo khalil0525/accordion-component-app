@@ -5,7 +5,6 @@ import AccordionItem from "./AccordionItem";
 const Accordion = (props) => {
   // This piece of state is used to determine which accordion item is open and which to close when opening a given accordion item
   const [openItem, setOpenItem] = useState("");
-  const [item1, item2, item3] = props.data;
   // The function will control the state for the accordion. We only want 1 tab open at once.
   // It will be passed as props to the AccordionItem to pull up the AccordionItem number that is currently open.
   const accordionItemHandler = (accordionItemNumber) => {
@@ -27,6 +26,7 @@ const Accordion = (props) => {
   let accordionItemGenerator = props.data.map((item) => {
     return (
       <AccordionItem
+        key={item.number}
         number={item.number}
         title={item.title}
         description={item.description}
