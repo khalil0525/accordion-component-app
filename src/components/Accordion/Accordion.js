@@ -6,19 +6,19 @@ const Accordion = (props) => {
   // This piece of state is used to determine which accordion item is open and which to close when opening a given accordion item
   const [openItem, setOpenItem] = useState("");
   // The function will control the state for the accordion. We only want 1 tab open at once.
-  // It will be passed as props to the AccordionItem to pull up the AccordionItem number that is currently open.
+  // It will be passed as props to the AccordionItem to determine which item to open and which item needs to be closed(if there was one already open)
   const accordionItemHandler = (accordionItemNumber) => {
     // Here we check if the current openItem value is equivalent to the accordionItemNumber that was sent from the clicked AccordionItem.
-    // If it is, we will close it.
+    // If it is, we will close it because it was already opened.
     if (openItem === accordionItemNumber) {
       setOpenItem("");
       return;
     }
     // Here we set the openItem to the accordionItem that was clicked.
     // The logic for opening and closing AccordionItem tabs is in AccordionItem.
-    // THe state variable we set here is passed down as a prop.
-    // 1) If no tab is open, we simply just open the tab we selected
-    //2) If a tab is open, we close it and open the selected tab.
+    // THe state variable we set here is passed down as a prop to all AccordionItem.
+    // 1) If an item was previously open that is not equal to the current state item open, we close it and open the new current open item.
+    //2) If no item was previously open, open the current state open item.
     setOpenItem(accordionItemNumber);
   };
 

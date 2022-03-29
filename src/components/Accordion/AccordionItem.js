@@ -13,8 +13,11 @@ const AccordionItem = (props) => {
 
   //********************JSX*************************
   return (
+    // Here we have a currentOpenItem prop and it controls the logic for opening and closing an AcoordionItem
+    // If the currentOpenItem is equal to a given AccordionItem we will set the "open" style and open it. Else, it stays closed.
+    // All of the AccordionItems has access to this piece of state, and we only want 1 item open at a time.
     <div
-      className={`${styles["accordion-item"]} ${
+      className={`${styles["accordion-item"]}  ${
         props.currentOpenItem === props.number && styles.open
       }`}
     >
